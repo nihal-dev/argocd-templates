@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: frontend
+  ## have to be in argocd namespace itself.
+  namespace: argocd
+spec:
+  ##A list of cluster-scoped resources that are allowed. Allows all groups and every kind of resources.
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  ## Basically this project can deploy the apps to only particular namespace and which k8s server.
+  destinations:
+  - namespace: 'default'
+    server: '*'
+  ## A list of namespace-scoped resources that are allowed. Currently allowing all resources.
+  namespaceResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  ## Allow all git repositories as source repos.
+  sourceRepos:
+  - '*'
