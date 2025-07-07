@@ -12,7 +12,7 @@ spec:
   project: sales-project
   source:
     path: projects/sales/
-    repoURL: https://github.com/nihal-dev/argocd-template.git
+    repoURL: https://github.com/nihal-dev/argocd-templates.git
     targetRevision: main
   syncPolicy:
     automated:
