@@ -13,6 +13,8 @@ spec:
   destinations:
   - namespace: 'sales'
     server: '*'
+  - namespace: 'argocd'
+    server: '*'
   ## A list of namespace-scoped resources that are allowed. Currently allowing all resources.
   namespaceResourceWhitelist:
   - group: '*'
