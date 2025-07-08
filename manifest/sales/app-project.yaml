@@ -11,7 +11,7 @@ spec:
     kind: '*'
   ## Basically this project can deploy the apps to only particular namespace and which k8s server.
   destinations:
-  - namespace: 'default'
+  - namespace: 'sales'
     server: '*'
   ## A list of namespace-scoped resources that are allowed. Currently allowing all resources.
   namespaceResourceWhitelist:
@@ -20,3 +20,6 @@ spec:
   ## Allow all git repositories as source repos.
   sourceRepos:
   - '*'
+  ## Only allow to be deployed from this namespace
+  sourceNamespace:
+  - 'default'
