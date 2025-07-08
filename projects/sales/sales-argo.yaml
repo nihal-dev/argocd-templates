@@ -11,7 +11,7 @@ spec:
     namespace: sales
   project: sales-project
   source:
-    path: projects/sales/
+    path: manifest/sales
     repoURL: https://github.com/nihal-dev/argocd-templates.git
     targetRevision: main
   syncPolicy:
