@@ -1,23 +1,23 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: nginx-frontend-application
-  namespace: sales
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: sales
-  project: frontend
-  source:
-    path: yaml
-    repoURL: https://github.com/nihal-dev/argocd-practise.git
-    targetRevision: main
-    # directory:
-    #   recurse: true
-    #   include: 'prd/*{appconfigs,ingress,spark}*'
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: nginx-frontend-application
+#   namespace: sales
+#   finalizers:
+#   - resources-finalizer.argocd.argoproj.io
+# spec:
+#   destination:
+#     server: https://kubernetes.default.svc
+#     namespace: sales
+#   project: frontend
+#   source:
+#     path: yaml
+#     repoURL: https://github.com/nihal-dev/argocd-practise.git
+#     targetRevision: main
+#     # directory:
+#     #   recurse: true
+#     #   include: 'prd/*{appconfigs,ingress,spark}*'
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
